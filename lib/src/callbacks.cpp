@@ -1,4 +1,4 @@
-// Copyright 2022-2025 Wang Bin. All rights reserved.
+// Copyright 2022-2026 Wang Bin. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -41,6 +41,7 @@ static unordered_map<int64_t, shared_ptr<Player>> players;
 // global callbacks
 static int gCallbackTypes = 0;
 
+[[clang::disable_tail_calls]]
 FVP_EXPORT void MdkSetKey(const char* key)
 {
     if (!key)
